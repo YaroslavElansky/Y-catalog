@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup Form Registration</title>
+<style>
+
+
+.square {
+  border: 5px solid #1d1d1d; /* создаем рамку */
+  border-radius: 10px; /* закругляем углы */
+  box-shadow: 5px 5px 5px #888; /* создаем слой */
+  padding: 50px; /* добавляем отступы внутри рамки */
+  width: 900px; /* задаем ширину */
+  height: 500px; /* задаем высоту */
+  position: fixed;
+  top: 100px;
+  left: 200px;
+}
+h1 {
+  text-align: center; /* Выравниваем текст по центру */
+  position: absolute; /* Позиционируем абсолютно (относительно родительского элемента) */
+  top: 0; /* Размещаем вверху */
+  left: 50%; /* Размещаем по центру горизонтали */
+  transform: translateX(-50%); /* Центрируем по горизонтали */
+}
+</style>
+</head>
+<body>
+<div class="square">
+ <p>
+  <h1 class="h1">Вход в систему</h1>
+</p> 
+  <div>
+    <p><input type="button" value="Войти/Регистрация" onclick="window.location.location.href='index_main.html'"></p>
+    <p>
+      <a href="">Личный кабинет</a>
+    </p>
+    <p>
+      <a type="img" href="">История заказов</a>
+    </p>
+    
+  </div>
+</div>
+
+</body>
+</html>

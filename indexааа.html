@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Y-catalog</title>
+    <link rel="stylesheet" href="style_index.css">
+    <script>
+        function openModal() {
+          document.getElementById('modal').style.display = 'block';
+        }
+      
+        function closeModal() {
+          document.getElementById('modal').style.display = 'none';
+        }
+        
+    </script>    
+    <style>
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>  
+</head>
+<body>
+    <header>
+       <div class="container">
+            <aside >
+                <div class="top">
+                     <div class="logo">
+                        <img src="src/img/logo.jpg" alt="">
+                     </div>
+                </div>
+            </aside>
+       </div> 
+        <div>
+            <img src=".img/logo.jpg" alt="Логотип">
+        </div>
+        <h1>Y-catalog</h1>
+        <nav>       
+                <form action="/search" method="get">
+                    <p><input type="text" id="searchInput" name="q" placeholder="Поиск товара" class="searchInput">
+                    <input type="submit" value="Искать" class="rounded-button"></p>
+                </form>
+                <p>
+                    <a href="#">История_заказов</a>
+                    <a href="#">Избранное</a>
+                    <a href="#modal" onclick="openModal()">Вход/Регистрация</a>
+                </p>
+                <div id="modal" class="modal">
+                     <h3>Вход в систему</h3>
+                        <form  method="post" action="src/scripts/php/login.php">                                 
+                        <input name="mail" placeholder="Почта" id="input-mail1" required class="rounded-input"/>
+                        <input name="password" placeholder="Пароль" id="input-password1" required class="rounded-input"/>
+                        <p>
+                            <button type="submit" class="rounded-button">Войти</button>
+                            <button type="button"class="rounded-button" onclick="closeModal()">Закрыть</button>
+                        </p>
+                        </form>
+                        <p>
+                             <a href="#registrationModal" class="rounded-button">Регистрация</a>
+                        </p>
+                </div>
+                <div id="registrationModal" class="modal-registration">
+                    <h3>Регистрация</h3>
+                    <form  method="post" action="src/scripts/php/login_signup_controller.php">
+                        <p><input name="full_name" type="text" placeholder="ФИО" id="input-fullname" class="rounded-inp"/></p>
+                        <p>
+                            <input name="mail" type="text" placeholder="Почта" id="input-mail" required class="rounded-input"/>
+                            <input name="password" placeholder="Пароль" id="input-password" required class="rounded-input" type="password"/>
+                        </p>
+                        <p>
+                            <input name="phone" placeholder="Телефон" id="input-phone" class="rounded-input"/>
+                            <select name="type_user" title="list" type="text"placeholder="Тип пользователя" id="type_user" class="rounded-input">
+                                <option value="Пользователь">Пользователь</option>
+                                <option value="Персонал">Персонал</option>
+                                <option value="Администратор сайта">Администратор сайта</option>
+                            </select>
+                              
+                        </p>
+                        <p><input name="adress" placeholder="Адрес" id="input" class="rounded-inp"/></p>
+                       <p>
+                            <button type="submit" class="rounded-button">Зарегистрироваться</button>
+                            <button type="reset" class="rounded-button">Очистить</button>
+                            <input type="button" value="Назад" class="rounded-button" onclick="history.go(-1)">
+                        </p>
+                    </form>
+                    </div>
+                </div>       
+        </nav>
+    </header>
+    <main>
+        <h2>Добро пожаловать в наш магазин!</h2>
+    </main>
+    <footer>
+        <p>&copy;2024 Y-catalog</p>
+    </footer>   
+</body>
+</html>

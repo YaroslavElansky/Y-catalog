@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .product-wrapper{
+            display: flex;
+            flex-flow: column;
+            border: 1px solid #888c87;
+            border-radius: 10px;
+            background: #fff;
+            margin: 10px 10px 10px 10px;
+            text-decoration: none;
+            color: #474747;
+            z-index: 0;
+            height: 350px;
+            width: 200px;
+        }
+        .img-product{
+            display: flex;
+            margin: 5px;
+            height: 180px;
+            width: 190px;
+            border-radius: 5px;
+        }
+        .product {
+            margin:5px;
+            text-decoration: none;
+            color: #474747;
+            overflow-wrap: break-word;
+            
+        }     
+        .form-price{
+            display: flex;
+            flex-direction:column;
+            margin: 10px;
+        }
+        .button-form{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            color: #30539C;
+        }   
+        .button-compare{
+            height: 50px;
+            border: none ;
+            font-family: "Cascadia Code";
+            font-weight: bold;
+            border-radius: 10px;
+            color: white;
+            background: linear-gradient(to top, #CD5B00, #E67415,#FF8D2E,#FFA647, #FFDDAB);
+        }
+        
+        .button-basket{
+            border: none;
+            font-family: "Cascadia Code";
+            font-weight: bold;
+            border-radius: 10px;
+            color: white;
+            background: linear-gradient(to top, #CD5B00, #E67415,#FF8D2E,#FFA647, #FFDDAB);
+        }
+        
+        .button-compare:hover{
+            background: linear-gradient(to top, #FFDDAB,#FFA647,#FF8D2E, #E67415,#CD5B00 );
+        }
+        
+        .button-compare:active{
+            color: #30539C;
+        }
+        
+        .button-basket:hover{
+            background: linear-gradient(to top, #FFDDAB,#FFA647,#FF8D2E, #E67415,#CD5B00 );
+        }
+        
+        .button-basket:active{
+            color: #30539C;
+        }
+        .shops-price{
+            height: 30px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <template>
+        <li class="product-wrapper" id="product-card">
+            <div class="img-product">
+                <img alt="Истребитель демонов. Том 17 Преемники" width="200" height="200" 
+                src="https://content.img-gorod.ru/pim/products/images/a2/f2/018fb801-23e1-79fd-b69d-4c121cc5a2f2.jpg?width=180&height=180&fit=bounds>
+            </div>
+            <a href="dfdfsad" class="product">Истребители демонов. Том 17 Преемники</a>
+            <p class="product-characteristics"></p>
+            <div class="form-price">
+                <select name="shops-price" title="list" type="text"placeholder="Имеющиеся цены" id="shops-price" class="shops-price">
+                <option value="Пользователь">Читай город:661 р</option>
+                <option value="Персонал">Буквоед:661р</option>
+                <option value="Администратор сайта">Лабиринт:920р</option>
+                </select>
+            </div>
+            <div class="button-form">
+                <button class="button-compare" onclick="increaseCounter('compare')">Сравнить</button>
+                <button class="button-basket" onclick="increaseCounter('basket')">Корзина</button>
+            </div>
+        </li>
+    </template>
+</body>
+</html>

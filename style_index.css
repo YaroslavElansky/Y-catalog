@@ -1,0 +1,136 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: rgba(48, 83,156 );
+    padding: 10px;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+main {
+    padding: 2em;
+    text-align: center;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 350px;
+    width: 350px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+.modal-registration {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 400px;
+    width: 400px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    
+}
+.modal-code{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 250px; /* Высота модального окна */
+    width: 250px; /* Ширина модального окна */
+    transform: translate(-50%, -50%);
+    background-color: #fcfcfc;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+.modal:target,
+.modal-registration:target {
+    display: block;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    z-index: 998;
+}
+
+.modal:target + .modal-overlay {
+    display: block;
+}
+.submit{
+    position: absolute;
+    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+}
+.rounded-input {
+    border-radius: 15px; /* Создаем округлые углы для текстовых полей */
+    padding: 10px; /* Добавляем отступ вокруг текстовых полей */
+    margin: 0 ;
+}
+.rounded-inp {
+    border-radius: 15px;
+    height: 20px;
+    width: 350px;
+    padding: 10px; /* Добавляем отступ вокруг текстовых полей */
+    margin:  0 ;
+}
+
+.rounded-button {
+    border-radius: 10px; /* Создаем округлые углы для кнопки */
+    padding: 10px 20px; /* Добавляем отступ внутри кнопки */
+    background-color: #4CAF50; /* Задаем цвет фона кнопки */
+    color: white; /* Задаем цвет текста кнопки */
+    border: none; /* Удаляем границу кнопки */
+    margin: 10px 0;
+}
+
+.searchInput{
+    border-radius: 15px;
+    height: 20px;
+    width: 650px;
+    padding: 10px; /* Добавляем отступ вокруг текстовых полей */
+    margin:  0 ;
+}
+h1, h3 {
+    text-shadow: 2px 2px 4px #bc0404;
+}
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
